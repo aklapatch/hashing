@@ -59,7 +59,7 @@ int main(){
 
             interval.start();
 
-            matches = test.getMatches(usr_in);
+            test.getMatches(usr_in, matches);
             // output all results
 
             interval.stop();
@@ -78,7 +78,6 @@ int main(){
 
                 std::cout << interval.GetInterval() << " micro-sec\n";
             }
-
 
             std::cout << "Input another word\n";
 
