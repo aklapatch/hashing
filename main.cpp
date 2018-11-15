@@ -7,9 +7,8 @@
 std::list<std::string> getWords(std::string f_name){
     
     std::list<std::string> ret;
-    
-    std::ifstream infile;
-
+	
+    std::ifstream infile; // try to open file
 	infile.open(f_name.data(), std::ios::in);
 
     std::string tmp;
@@ -31,17 +30,11 @@ int main(){
 
     std::list<std::string> words = getWords("Dictionary.txt");
 
-    // make a vector to load hash
-    std::vector<std::string> word_vec(words.size());
-
-    for(int i =0; !words.empty(); ++i){
-        word_vec[i] = words.front();
-        words.pop_front();
-    }
-
+	// init hash
     Hash test(26);
 
-    test.load(word_vec);
+	// load words
+    test.load(words);
 
     // get user input
     std::string usr_in;
