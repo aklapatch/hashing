@@ -2,12 +2,15 @@
 #include "Hash.hpp"
 #include "TimeInterval.h"
 #include<fstream>
+#include <iostream>
 // get words to load into hash
 std::list<std::string> getWords(std::string f_name){
     
     std::list<std::string> ret;
     
-    std::ifstream infile (f_name);
+    std::ifstream infile;
+
+	infile.open(f_name.data(), std::ios::in);
 
     std::string tmp;
 

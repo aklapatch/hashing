@@ -27,7 +27,7 @@ bool compare(std::string in, std::string in2){
 
 class Hash {
     private:
-        std::vector<std::deque<std::string>> table;
+        std::vector<std::deque<std::string> > table;
 
     public:
         Hash();
